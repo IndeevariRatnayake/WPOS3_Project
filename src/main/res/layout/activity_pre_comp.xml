@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UI.OtherTrans.PreComp"
+    android:background="@drawable/gradient"
+    android:padding="20dp"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PRE COMPLETION"
+        android:textSize="25dp"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"/>
+
+    <RelativeLayout
+        android:id="@+id/container2"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/title"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/border"
+        android:padding="10dp">
+
+        <FrameLayout
+            android:id="@+id/placeHolder"
+            android:layout_centerHorizontal="true"
+            android:name="com.harshana.wposandroiposapp.UI.Fregments.HostMerchantSelectFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/container1"
+        android:layout_below="@id/container2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:layout_marginTop="5dp"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/txtDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No PreAuth transaction found"
+            android:textSize="20dp"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/white"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_marginTop="2dp"
+            android:id="@+id/txtdesc2"
+            android:layout_below="@id/txtDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="17dp"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/white"
+            android:textStyle="bold"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/container"
+        android:padding="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/container1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border">
+
+        <TextView
+            android:id="@+id/title2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Please enter either Invoice No or PAN"
+            android:textSize="15dp"
+            android:textColor="@color/black"
+            android:layout_centerHorizontal="true"/>
+
+        <EditText
+            android:id="@+id/txtInvoiceNumber"
+            android:layout_below="@id/title2"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:hint="Key in Invoice no"
+            android:layout_marginTop="10dp"
+            android:inputType="number"
+            android:maxLength="6"
+            android:imeOptions="actionDone"
+            android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/container"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="cancel"
+        android:background="@drawable/button_shape"/>
+
+    <Button
+        android:id="@+id/btnPreComp"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/container"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="pre comp"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/button_shape"
+        android:enabled="false"/>
+
+
+</RelativeLayout>

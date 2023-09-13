@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UI.Utils.ClearBatch"
+    android:padding="10dp"
+    android:background="@drawable/gradient">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CLEAR BATCH"
+        android:textColor="@color/colorBlack"
+        android:textSize="25dp"
+        android:layout_centerHorizontal="true"/>
+
+
+
+    <RelativeLayout
+        android:id="@+id/container"
+        android:layout_below="@id/title"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginTop="20dp"
+        android:padding="10dp"
+        android:background="@drawable/border">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBlack"
+            android:textSize="15dp"
+            android:text="Select Host and the merchant"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/title2"/>
+
+        <ScrollView android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/title2">
+            <FrameLayout
+                android:id="@+id/placeHolder"
+                android:layout_below="@id/title2"
+                android:name="com.harshana.wposandroiposapp.UI.Fregments.HostMerchantSelectFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </ScrollView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/container2"
+        android:layout_below="@id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/txtInfo"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@color/black"
+            android:textColor="@color/red"
+            android:text="Tap on clear button under selected merchant and host, please note once you perform the operation the transaction are permanently deleted from the batch"
+            android:padding="7dp"
+            android:textSize="15dp"
+            android:textAlignment="center"
+            />
+
+        <Button
+            android:id="@+id/btnClearBatch"
+            android:layout_below="@id/txtInfo"
+            android:layout_centerHorizontal="true"
+            android:text="clear"
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:background="@drawable/button_shape"
+            />
+
+    </RelativeLayout>
+
+
+
+    <Button
+        android:id="@+id/btnClose"
+        android:layout_below="@id/container2"
+        android:layout_centerHorizontal="true"
+        android:text="close"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/button_shape"/>
+
+</RelativeLayout>

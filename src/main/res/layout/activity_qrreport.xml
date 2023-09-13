@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UI.Reports.QRReportActivity"
+    android:padding="10dp"
+    android:background="@drawable/gradient">
+
+    <TextView
+        android:id="@+id/titleQR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="QR TRANSACTION REPORT"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:id="@+id/contentTranDetails"
+        android:layout_below="@id/titleQR"
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+        android:layout_centerHorizontal="true"
+        android:padding="5dp"
+        android:background="@drawable/border">
+
+        <RadioGroup
+            android:id="@+id/radioGroupQR"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/rdDetailReportQR"
+                android:text="Detail Report"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:buttonTint="@color/colorPrimaryDark"
+                android:checked="true"
+                android:textStyle="italic"/>
+
+            <RadioButton
+                android:id="@+id/rdSummeryReportQR"
+                android:text="Summary Report"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/colorPrimaryDark"
+                android:layout_marginTop="20dp"
+                android:textStyle="italic"/>
+        </RadioGroup>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnCancelQR"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_below="@id/contentTranDetails"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_shape"
+        android:text="cancel" />
+
+    <Button
+        android:id="@+id/btnPrintQR"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_below="@id/contentTranDetails"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="11dp"
+        android:background="@drawable/button_shape"
+        android:text="print " />
+
+</RelativeLayout>

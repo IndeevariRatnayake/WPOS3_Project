@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UI.BatchTrans.VoidActivity"
+    android:padding="20dp"
+    android:background="@drawable/gradient">
+
+
+    <TextView
+        android:id="@+id/title"
+        android:text="VOID"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/titleIssuer"
+        android:layout_below="@id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:text="Select an Issuer"
+        android:textSize="15dp"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="1dp"/>
+
+
+        <RelativeLayout
+        android:id="@+id/fragmentHolder"
+        android:layout_below="@id/titleIssuer"
+        android:layout_marginTop="20dp"
+        android:layout_width="400dp"
+        android:layout_height="200dp"
+        android:padding="10dp"
+        android:background="@drawable/border">
+
+            <ScrollView android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <FrameLayout
+                    android:id="@+id/placeHolder"
+                    android:name="com.harshana.wposandroiposapp.UI.Fregments.HostMerchantSelectFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </ScrollView>
+
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </ScrollView>
+
+        <RelativeLayout
+            android:id="@+id/contentHolder"
+            android:layout_below="@+id/fragmentHolder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:padding="20dp"
+            android:background="@drawable/border">
+
+            <EditText
+                android:id="@+id/txtInvoiceNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:inputType="numberDecimal"
+                android:textSize="20dp"
+                android:maxLength="6"
+                android:hint="key in invoice no"/>
+
+            <Button
+                android:id="@+id/btnCheck"
+                android:layout_width="70dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="1dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/button_shape"
+                android:text="check"
+                />
+
+            <RelativeLayout
+                android:layout_below="@id/txtInvoiceNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorBlack"
+                android:padding="10dp"
+                android:layout_marginTop="15dp"
+                >
+
+                <TextView
+                    android:id="@+id/txtCardNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Card NO : "
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:textSize="25dp"
+                  />
+
+                <TextView
+                    android:id="@+id/txtTranAmount"
+                    android:layout_below="@+id/txtCardNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Amount  : "
+                    android:textColor="@color/white"
+                    android:layout_marginTop="10dp"
+                    android:textSize="25dp"
+                    android:textStyle="bold"/>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_below="@id/contentHolder"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_shape"
+            android:text="Cancel" />
+
+        <Button
+            android:id="@+id/btnConfirm"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_below="@id/contentHolder"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/button_shape"
+            android:text="confirm" />
+
+
+
+
+
+</RelativeLayout>

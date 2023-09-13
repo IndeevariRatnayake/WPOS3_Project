@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical"
+    tools:context=".UI.Reports.ReportActivity"
+    android:splitMotionEvents="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/bg"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:background="@color/bg" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/img_header" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:padding="20dp"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/layoutbutton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/hostParameterButton"
+                android:background="@drawable/white_bg"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:textAllCaps="false"
+                android:text="Host Parameter" />
+
+            <Button
+                android:id="@+id/transactionReportButton"
+                android:background="@drawable/white_bg"
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:textAllCaps="false"
+                android:layout_height="40dp"
+                android:text="Transaction Reports" />
+
+            <Button
+                android:id="@+id/qrReportButton"
+                android:background="@drawable/white_bg"
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:textAllCaps="false"
+                android:layout_height="40dp"
+                android:text="QR Transaction Reports" />
+
+            <Button
+                android:id="@+id/lastReceipt"
+                android:background="@drawable/white_bg"
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:textAllCaps="false"
+                android:layout_height="40dp"
+                android:text="Last Receipt" />
+
+            <Button
+                android:id="@+id/lastReceiptQR"
+                android:background="@drawable/white_bg"
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:textAllCaps="false"
+                android:layout_height="40dp"
+                android:text="Last Receipt QR" />
+
+            <Button
+                android:id="@+id/anyReceipt"
+                android:background="@drawable/white_bg"
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:textAllCaps="false"
+                android:layout_height="40dp"
+                android:text="Any Receipt" />
+
+            <Button
+                android:id="@+id/anyReceiptQR"
+                android:background="@drawable/white_bg"
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:textAllCaps="false"
+                android:layout_height="40dp"
+                android:text="Any Receipt QR" />
+
+            <Button
+                android:id="@+id/lastSettlement"
+                android:background="@drawable/white_bg"
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:textAllCaps="false"
+                android:layout_height="40dp"
+                android:text="Last Settlement" />
+
+            <Button
+                android:id="@+id/cardBrandButton"
+                android:background="@drawable/white_bg"
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:textAllCaps="false"
+                android:layout_height="40dp"
+                android:text="Card Brand Sale Graph" />
+
+            <Button
+                android:id="@+id/bankWiseButton"
+                android:background="@drawable/white_bg"
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:textAllCaps="false"
+                android:layout_height="40dp"
+                android:text="Bank Wise Sale Graph" />
+
+            <Button
+                android:id="@+id/diagnosticButton"
+                android:background="@drawable/white_bg"
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:textAllCaps="false"
+                android:layout_height="40dp"
+                android:text="Diagnostic Reports" />
+
+            <Button
+                android:id="@+id/existButton"
+                android:background="@drawable/white_bg"
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:textAllCaps="false"
+                android:layout_height="40dp"
+                android:text="Exit" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

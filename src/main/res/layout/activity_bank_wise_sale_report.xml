@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UI.Reports.BankViseSaleReport"
+    android:background="@drawable/gradient"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="SALE  [ BANK-WISE ]"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:id="@+id/container"
+        android:layout_below="@id/title"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:padding="10dp"
+        android:background="@drawable/border">
+
+        <ListView
+            android:id="@+id/lvIssuer"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:listSelector="@color/colorPrimaryDark"/>
+
+        <TextView
+            android:id="@+id/txtStartDate"
+            android:text="Tap to Set Start Date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/lvIssuer"
+            android:layout_marginLeft="20dp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/txtEndDate"
+            android:layout_marginLeft="20dp"
+            android:layout_below="@id/txtStartDate"
+            android:text="Tap to Set End Date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/lvIssuer"
+            android:layout_marginTop="30dp"
+            android:textColor="@color/black"/>
+
+        <Button
+            android:id="@+id/btnGenerate"
+            android:text="Generate Graph"
+            android:background="@drawable/button_shape"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/lvIssuer"
+            android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/container2"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/container"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:background="@drawable/border">
+
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/pieChart"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

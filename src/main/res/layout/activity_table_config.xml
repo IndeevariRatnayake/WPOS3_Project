@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".Settings.TableConfigActivity"
+android:background="@color/colorPrimaryDark"
+android:orientation="vertical"
+android:id="@+id/idBaseLayoutTableConfig">
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:id="@+id/idSubLayoutTableConfig">
+
+    <Button
+        android:id="@+id/btnPrev"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="Prev"
+        android:background="@drawable/button_shape"
+        android:textColor="@color/colorWhite"/>
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_toRightOf="@id/btnPrev"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="Next"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/button_shape"
+        android:textColor="@color/colorWhite"/>
+
+    <Button
+        android:id="@+id/btnSeek"
+        android:layout_below="@id/btnPrev"
+        android:layout_width="210dp"
+        android:layout_height="40dp"
+        android:text="Seek To >>"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/button_shape"
+        android:textColor="@color/colorWhite"/>
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="Save"
+        android:layout_toRightOf="@id/btnNext"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/button_shape"
+        android:textColor="@color/colorWhite"/>
+
+    <EditText
+        android:id="@+id/txtRecNumber"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorWhite"
+        android:layout_below="@id/btnNext"
+        android:layout_toRightOf="@id/btnSeek"
+        android:layout_marginStart="10dp"
+        android:inputType="number"
+
+        android:text="1"
+        />
+
+    <TextView
+        android:id="@+id/txtIns"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorWhite"
+        android:textSize="8dp"
+        android:text="Select a Table to Load"
+        android:textAlignment="center"
+        android:layout_below="@id/btnSeek"
+        android:layout_marginTop="10dp"
+        />
+
+    <Spinner
+        android:id="@+id/cmbTableList"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/txtIns"
+        android:textAlignment="center"
+        android:background="@drawable/button_shape"
+        android:backgroundTint="@color/colorWhite"
+        />
+
+
+</RelativeLayout>
+
+<ScrollView
+    android:layout_marginTop="20dp"
+    android:layout_width="fill_parent"
+    android:layout_height="200dp">
+
+    <GridLayout
+        android:id="@+id/controlGrid"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:backgroundTint="@color/black"
+        android:columnCount="2"
+        android:background="@color/black"
+        android:foregroundTint="@color/colorBlack"
+        android:padding="10dp">
+
+    </GridLayout>
+
+</ScrollView>
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+    <Button
+        android:id="@+id/btnExit"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_shape"
+        android:text="Close"
+        android:textColor="@color/colorWhite"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>
+
+
+
+
+</LinearLayout>

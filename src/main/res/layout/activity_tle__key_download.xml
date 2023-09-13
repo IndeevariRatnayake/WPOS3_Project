@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".KeyOperations.TLEKeyDownload"
+    android:padding="20dp"
+    android:background="@drawable/gradient"
+    android:id="@+id/tle_key_download">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TLE KEY DOWNLOAD"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"/>
+
+    <RelativeLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:background="@drawable/border"
+        android:padding="20dp"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/txtEnterPin"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="TLE CARD PIN"/>
+
+        <EditText
+            android:id="@+id/txtPIN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/txtEnterPin"
+            android:layout_marginLeft="50dp"
+            android:hint="111111"
+            android:inputType="numberDecimal"
+            android:textSize="25dp"/>
+
+        <Button
+            android:id="@+id/btnKeyDownload"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/button_shape"
+            android:text="Key Download"
+            android:layout_below="@id/txtEnterPin"
+            android:layout_marginTop="20dp"/>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/container2"
+        android:layout_below="@id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border">
+
+        <ListView
+            android:id="@+id/lvIssuersKeyDownload"
+            android:layout_width="250dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="10dp"
+            android:listSelector="@color/colorPrimaryDark"
+            android:layout_centerHorizontal="true"/>
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/txtStatus"
+        android:layout_below="@id/container2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="status"
+        android:textSize="15dp"
+        android:textColor="@color/blue"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"/>
+    <Button
+        android:id="@+id/btnClose"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_shape"
+        android:layout_below="@id/txtStatus"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:text="Exit"
+        />
+
+</RelativeLayout>

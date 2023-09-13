@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UI.Reports.TransactionReports"
+    android:padding="10dp"
+    android:background="@drawable/gradient">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="TRANSACTION REPORT"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/titleIssuer"
+        android:layout_below="@id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:text="Select an Issuer"
+        android:textSize="15dp"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="1dp"/>
+
+    <RelativeLayout
+        android:id="@+id/contentTranDetails"
+        android:layout_below="@id/titleIssuer"
+        android:layout_width="match_parent"
+        android:layout_height="225dp"
+        android:padding="5dp"
+        android:background="@drawable/border">
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rdDetailReport"
+                android:text="Detail Report"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:buttonTint="@color/colorPrimaryDark"
+                android:checked="true"
+                android:textStyle="italic"/>
+            <RadioButton
+                android:id="@+id/rdSummeryReport"
+                android:text="Summary Report"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/colorPrimaryDark"
+                android:layout_marginLeft="50dp"
+                android:textStyle="italic"/>
+
+        </RadioGroup>
+
+        <ScrollView android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/radioGroup">
+            <fragment
+                android:id="@+id/placeHolder"
+                android:layout_below="@id/radioGroup"
+                android:name="com.harshana.wposandroiposapp.UI.Fregments.HostMerchantSelectFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </ScrollView>
+
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/titleDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/contentTranDetails"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="DETAILED RECORDS"
+        android:textColor="@color/black"
+        android:textSize="12dp"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="339dp"
+        android:layout_height="180dp"
+        android:layout_below="@id/titleDetail"
+        android:layout_marginTop="13dp"
+        android:background="@drawable/border"
+        android:padding="10dp"
+        android:scrollbarSize="5dp"
+        android:scrollbars="horizontal">
+
+        <TableLayout
+            android:id="@+id/tableLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </TableLayout>
+    </ScrollView>
+
+
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_below="@id/scrollView"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_shape"
+        android:text="cancel" />
+
+    <Button
+        android:id="@+id/btnPrint"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_below="@id/scrollView"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="11dp"
+        android:background="@drawable/button_shape"
+        android:text="print " />
+</RelativeLayout>

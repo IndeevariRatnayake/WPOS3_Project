@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UI.TranFlow.ManualKeyEntry"
+    android:background="@drawable/gradient"
+    android:padding="20dp"
+    >
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MANUAL KEY ENTRY"
+        android:layout_centerHorizontal="true"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/idExpiryDate"
+        android:layout_below="@id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Expiry Date"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/idYear"
+        android:layout_below="@id/idExpiryDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Year"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"
+        android:layout_marginLeft="60dp"
+       />
+    <TextView
+        android:id="@+id/idMonth"
+        android:layout_below="@id/idExpiryDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Month"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"
+        android:layout_marginLeft="220dp"
+        />
+
+    <LinearLayout
+        android:id="@+id/container"
+        android:layout_below="@id/idYear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        >
+
+        <NumberPicker
+            android:id="@+id/dtYearPicker"
+            android:layout_below="@id/idExpiryDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+            />
+
+        <NumberPicker
+            android:id="@+id/dtMonthPicker"
+            android:layout_below="@id/idExpiryDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="100dp"
+            />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/idPanTitle"
+        android:layout_below="@id/container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PAN"
+        android:textStyle="bold"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"/>
+
+    <EditText
+        android:id="@+id/txtPan"
+        android:layout_below="@id/idPanTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="key in pan"
+        android:textStyle="bold"
+        android:textSize="40dp"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:maxLength="19"
+        />
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_below="@id/txtPan"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/button_shape"
+        android:text="Cancel" />
+
+    <Button
+        android:id="@+id/btnProceed"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_below="@id/txtPan"
+        android:layout_marginLeft="85dp"
+        android:layout_marginTop="15dp"
+        android:layout_toRightOf="@id/btnCancel"
+        android:background="@drawable/button_shape"
+        android:text="Proceed" />
+
+</RelativeLayout>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#008577</color>
+   <!-- <color name="colorPrimaryDark">#e15626</color>-->
+
+
+
+
+  <!--<color name="colorPrimaryDark">#fe000b</color> -->
+   <!-- <color name="colorPrimaryDark">#00b4f1</color>    -->  <!--hnb-->
+     <!--<color name="colorPrimaryDark">#0192d9</color> --> <!--commercial-->
+    <color name="colorPrimaryDark">#ed6506</color>   <!--sampath-->
+    <!--<color name="colorPrimaryDark">#0080c7</color>-->   <!--nations trust-->
+   <!-- <color name="colorPrimaryDark">#ed1b24</color> -->  <!--seylan-->
+
+    <color name="centerGradientColor">#1b268b</color>
+    <color name="colorAccent">#000033</color>
+    <color name="colorBlack">#020001</color>
+    <color name="colorWhite">#FFFFFF</color>
+
+    <color name="bg_app">#F5F5F5</color>
+    <color name="black">#13252e</color>
+    <color name="darkGrey">#707070</color>
+    <color name="blue">#3434D5</color>
+    <color name="text_gray">#aeafaf</color>
+    <color name="text_blue">#0185d0</color>
+
+    <color name="bg">#E76203</color>
+    <color name="transparent">#00000000</color>
+    <color name="red">#ff0000</color>
+    <color name="light_red">#ff3232</color>
+    <color name="orange">#ffa500</color>
+
+    <color name="white">#FFFFFF</color>
+
+    <color name="color_transparent">#e0aeafaf</color>
+
+    <!--收银界面-->
+    <color name="input_num">#464646</color>
+    <color name="btn_num_normal">#ffffff</color>
+    <color name="btn_num_press">#2594E0</color>
+
+    <color name="background_gray">#E2D9D6</color>
+    <color name="border_color">#000000</color>
+
+
+    <color name="line_color">#a0a0a0</color>
+    <color name="translucent">#50000011</color>
+    <color name="green">#ff32ba1a</color>
+    <color name="dark_green"> 	#32CD32</color>
+    <drawable name="background_green">#29ACFF</drawable>
+    <drawable name="background_white">@android:color/white</drawable>
+
+    <drawable name="background_button_enable">#2594E0</drawable>
+    <drawable name="background_button_unable">#B7B9BA</drawable>
+
+
+    <!--通联方提供字体颜色-->
+    <color name="allinpay_title_and_line_text">#666666</color>
+    <color name="allinpay_text_green">#55BAFF</color>
+    <color name="allinpay_text_gray">#DFDEDE</color>
+
+    <color name="allinpay_edit_black">#292929</color>
+    <color name="allinpay_edit_left_text">#767676</color>
+    <color name="allinpay_bg_app">#F2F2F2</color>
+    <color name="colorDivider">#BEBEBE</color>
+    <color name="colorGreen">#85ca33</color>
+</resources>

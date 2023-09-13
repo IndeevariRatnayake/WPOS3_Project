@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/gradient">
+
+    <TextView
+        android:padding="10dp"
+        android:minHeight="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:text="PIN VERIFICATION"
+        android:id="@+id/msg_title"
+        android:gravity="center" />
+    <TextView
+        android:background="#00000000"
+        android:padding="10dp"
+        android:minHeight="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="38sp"
+        android:text="New Text"
+        android:id="@+id/textView"
+        android:gravity="center" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            style="@style/base_pin_button"
+            android:text="1"
+            android:id="@+id/button1" />
+
+        <Button
+            style="@style/base_pin_button"
+            android:text="2"
+            android:id="@+id/button2" />
+
+        <Button
+            style="@style/base_pin_button"
+            android:text="3"
+            android:id="@+id/button3" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            style="@style/base_pin_button"
+            android:text="4"
+            android:id="@+id/button4" />
+
+        <Button
+            style="@style/base_pin_button"
+            android:text="5"
+            android:id="@+id/button5" />
+
+        <Button
+            style="@style/base_pin_button"
+            android:text="6"
+            android:id="@+id/button6" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            style="@style/base_pin_button"
+            android:text="7"
+            android:id="@+id/button7" />
+
+        <Button
+            style="@style/base_pin_button"
+            android:text="8"
+            android:id="@+id/button8" />
+
+        <Button
+            style="@style/base_pin_button"
+            android:text="9"
+            android:id="@+id/button9" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <Button
+            android:id="@+id/buttonclean"
+            style="@style/base_pin_button"
+            android:background="@color/colorPrimaryDark"
+            android:text="Clean"
+            android:textSize="16sp" />
+
+        <Button
+            style="@style/base_pin_button"
+            android:text="0"
+            android:id="@+id/button0" />
+
+        <Button
+            style="@style/base_pin_button"
+            android:background="@color/colorPrimaryDark"
+            android:textSize="16sp"
+            android:text="@string/cancel"
+            android:id="@+id/buttoncan" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <Button
+            android:id="@+id/buttonconfirm"
+            style="@style/base_pinconfirm_button"
+            android:background="@color/colorGreen"
+            android:text="@string/confirm"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

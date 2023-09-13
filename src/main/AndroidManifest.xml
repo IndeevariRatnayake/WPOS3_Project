@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.harshana.wposandroiposapp">
+
+    <uses-feature
+        android:name="android.hardware.usb.host"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.location"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.location.gps"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.NFC" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".UI.Reports.AnyReceiptQRActivity"></activity>
+        <activity android:name=".UI.Utils.ForceReversals" />
+        <activity android:name=".UI.Reports.QRReportActivity" />
+        <activity android:name=".UI.Reports.LastSettleActivity" />
+        <activity android:name=".QRIntegration.QRVerify" />
+        <activity
+            android:name=".UI.Settings.MerchantLoginActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".UI.Settings.SetMerchantPwActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".UI.Users.AdminLoginActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".UI.Settings.SettingsHomeActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".UI.Reports.ReportActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".UI.Utils.ClearBatch" />
+        <activity android:name=".UI.Other.AutomatedTaskLogger" />
+        <activity android:name=".UI.Other.Last4Activity" />
+        <activity
+            android:name=".UI.Reports.HostReport"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".UI.Reports.AnyReceiptActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".UI.Utils.ClearReversals" />
+        <activity
+            android:name=".UI.OtherTrans.PreComp"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".QRIntegration.QRDisplay" />
+        <activity
+            android:name=".UI.TranFlow.ManualKeyEntry"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".DevTools.PushPullTest" />
+        <activity
+            android:name=".Settings.TableConfigActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".UI.Reports.BankViseSaleReport" />
+        <activity android:name=".UI.Reports.IssuerMerchantViseSaleReport" />
+        <activity android:name=".KeyOperations.PINKeyInject" />
+        <activity
+            android:name=".UI.Reports.TransactionReports"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".UI.BatchTrans.SettlementActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Settings.SettingsActivity" />
+        <activity
+            android:name=".KeyOperations.TLEKeyDownload"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".UI.BatchTrans.VoidActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".UI.TranFlow.MerchantSelectActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".UI.TranFlow.InputAmount"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.MONKEY" />
+                <category android:name="android.intent.category.APP_MARKET" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name=".BootReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter android:priority="1000">
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".ECR.UsbService"
+            android:enabled="true" />
+    </application>
+
+</manifest>

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: ./libs/poslib.jar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libs/poslib.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

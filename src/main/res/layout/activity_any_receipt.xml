@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UI.Reports.AnyReceiptActivity"
+    android:padding="10dp"
+    android:background="@drawable/gradient"
+    >
+
+    <TextView
+        android:id="@+id/title"
+        android:text="Print Any Receipt"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:textStyle="bold"/>
+
+    <LinearLayout
+        android:id="@+id/invNo"
+        android:layout_below="@id/title"
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+
+        <TextView
+            android:id="@+id/txtInvoiceNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:text="Invoice Number"
+            android:textColor="@color/colorWhite"
+            android:textSize="16dp" />
+
+        <EditText
+            android:id="@+id/etInvoiceNumber"
+            android:layout_width="104dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="26dp"
+            android:layout_alignParentRight="true"
+            android:backgroundTint="@color/colorBlack"
+            android:ems="10"
+            android:foregroundTint="@color/colorBlack"
+            android:inputType="number"
+            android:maxLength="6"
+            android:textColor="@color/colorWhite"
+            android:textSize="17dp"
+            android:imeOptions="actionDone"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/containerLists"
+        android:layout_below="@id/invNo"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@drawable/border"
+        android:padding="10dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        >
+
+        <TextView
+            android:id="@+id/txtInstruct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:layout_centerHorizontal="true"
+            android:text="Please select a merchant "
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/colorBlack"/>
+
+        <ScrollView android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/txtInstruct">
+            <FrameLayout
+                android:id="@+id/placeHolder"
+                android:layout_below="@id/txtInstruct"
+                android:name="com.harshana.wposandroiposapp.UI.Fregments.HostMerchantSelectFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </ScrollView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/btnContainer"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/border">
+
+        <Button
+            android:id="@+id/btnConfirm_anyTran"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:background="@drawable/button_shape"
+            android:text="PRINT"/>
+
+        <Button
+            android:id="@+id/btnCancel_anyTran"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:background="@drawable/button_shape"
+            android:layout_alignParentRight="true"
+            android:text="EXIT"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <SwitchPreference android:title="Single Merchant Mode"
+        android:summary="Put the terminal to run in single merchant mode"
+        android:defaultValue="false"
+        android:key="is_single_merchant"
+        android:layout="@layout/pref_layout"/>
+
+    <SwitchPreference android:title="Auto Reversal Enable"
+        android:summary="Enable auto reversal"
+        android:defaultValue="false"
+        android:key="is_auto_reversal"
+        android:layout="@layout/pref_layout"/>
+
+    <SwitchPreference android:title="Enable Auto Settlement"
+        android:summary="Enable or Disables Auto Settlement for all hosts"
+        android:defaultValue="false"
+        android:key="is_terminal_aut_settle_enabled"
+        android:layout="@layout/pref_layout"/>
+
+    <!--EditTextPreference android:title="Card Reader Idle Time  Out"
+        android:summary="Defines the number of seconds before the card reader go to sleep"
+        android:defaultValue="60"
+        android:key="card_reader_idle_timeout"
+        android:layout="@layout/pref_layout"
+        android:inputType="number"
+        /-->
+
+    <SwitchPreference android:title="[Clear Packet] ISO log"
+        android:summary="Prints the ISO standard clear packet"
+        android:defaultValue="false"
+        android:key="iso_print"
+        android:layout="@layout/pref_layout"/>
+
+    <SwitchPreference android:title="Is UAT ?"
+        android:summary="Testing purposes"
+        android:defaultValue="false"
+        android:key="is_uat"
+        android:layout="@layout/pref_layout"/>
+
+    <SwitchPreference android:title="[Enc Packet] ISO log"
+        android:summary="Prints the ISO standard TLE packet"
+        android:defaultValue="false"
+        android:key="iso_print_enc"
+        android:layout="@layout/pref_layout"/>
+
+    <EditTextPreference android:title="Connect Timeout"
+        android:summary="Defines the number of seconds TCP connect attempt"
+        android:defaultValue="12"
+        android:key="connect_timeout"
+        android:layout="@layout/pref_layout"
+        android:inputType="number"
+        />
+
+    <EditTextPreference android:title="Reversal Timeout"
+        android:summary="Defines the number of seconds should attempt data receive [Reversal Condition]"
+        android:defaultValue="15"
+        android:key="reversal_timeout"
+        android:layout="@layout/pref_layout"
+        android:inputType="number"
+        />
+
+    <SwitchPreference android:title="ECR Enabled"
+        android:summary="Enables Electronic Cash Register Functionality within the terminal"
+        android:defaultValue="false"
+        android:key="ecr_enable"
+        android:layout="@layout/pref_layout"/>
+
+    <SwitchPreference android:title="Encryption"
+        android:summary="Enables Terminal Line Encryption"
+        android:defaultValue="false"
+        android:key="tle_enable"
+        android:layout="@layout/pref_layout"/>
+
+    <SwitchPreference android:title="Performance Monitor"
+        android:summary="Starts the performance monitor [Restart Required]"
+        android:defaultValue="false"
+        android:key="performance_monitor"
+        android:layout="@layout/pref_layout"/>
+
+    <SwitchPreference android:title="Speech Enabled"
+        android:summary="Specific events are spoken"
+        android:defaultValue="true"
+        android:key="speech_enable"
+        android:layout="@layout/pref_layout"/>
+
+    <SwitchPreference android:title="Pre Auth"
+        android:summary="Enable or Disables Pre Auth for hosts"
+        android:defaultValue="false"
+        android:key="is_pre_auth_enable"
+        android:layout="@layout/pref_layout"/>
+
+    <SwitchPreference android:title="Force Reversal"
+        android:summary="Enable or Disables Force Reversal for hosts"
+        android:defaultValue="false"
+        android:key="is_force_rev_enable"
+        android:layout="@layout/pref_layout"/>
+
+    <SwitchPreference android:title="Enable DCC"
+        android:summary="Enables dynamic currency conversion"
+        android:defaultValue="false"
+        android:key="dcc_enabled"
+        android:layout="@layout/pref_layout"/>
+
+    <SwitchPreference android:title="Enable Manual Key In"
+        android:summary="Enables Manual Key In transactions"
+        android:defaultValue="false"
+        android:key="manual_key_in"
+        android:layout="@layout/pref_layout"/>
+
+    <SwitchPreference android:title="Enable EMV Diagnosis"
+        android:summary="Enables EMV Diagnosis report printing"
+        android:defaultValue="false"
+        android:key="emv_diag_enable"
+        android:layout="@layout/pref_layout"/>
+
+    <SwitchPreference android:title="Enable Push/Pull Module"
+        android:summary="Enables the push/pull module which performs the integrations with the back end portal"
+        android:defaultValue="false"
+        android:key="enable_pp_module"
+        android:layout="@layout/pref_layout"/>
+
+    <SwitchPreference android:title="Print Both Receipt Copies"
+        android:summary="Enables printing both customers and merchant copies,enables prompts for customer copy"
+        android:defaultValue="false"
+        android:key="enable_cust_copy"
+        android:layout="@layout/pref_layout"/>
+
+    <Preference android:title="V1.8.4"
+        android:layout="@layout/pref_layout"/>
+</PreferenceScreen>

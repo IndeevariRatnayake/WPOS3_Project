@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+    tools:context=".UI.Reports.LastSettleActivity"
+    android:id="@+id/idBaseLastSettlement">
+
+    <TextView
+        android:id="@+id/titlelast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="PRINT LAST SETTLEMENT"
+        android:textColor="@color/colorWhite"
+        android:layout_centerHorizontal="true"
+        android:textSize="10dp" />
+
+    <RelativeLayout
+        android:id="@+id/containerLists"
+        android:layout_below="@id/titlelast"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@drawable/border"
+        android:padding="10dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        >
+
+        <TextView
+            android:id="@+id/txtInstruct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:layout_centerHorizontal="true"
+            android:text="Please select a merchant "
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/colorBlack"/>
+
+        <ScrollView android:id = "@+id/listscroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/txtInstruct">
+            <FrameLayout
+                android:id="@+id/placeHolder"
+                android:layout_below="@id/txtInstruct"
+                android:name="com.harshana.wposandroiposapp.UI.Fregments.HostMerchantSelectFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </ScrollView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/btnContainer"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/border">
+
+        <Button
+            android:id="@+id/btnLastCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:background="@drawable/button_shape"
+            android:text="Close"/>
+
+        <Button
+            android:id="@+id/btnLastSettle"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:background="@drawable/button_shape"
+            android:layout_alignParentRight="true"
+            android:text="Print"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
